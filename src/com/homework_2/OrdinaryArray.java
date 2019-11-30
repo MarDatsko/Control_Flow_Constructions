@@ -35,7 +35,7 @@ public class OrdinaryArray {
     private static void sumPositiveNumbers(Integer[] array) {
         int result = 0;
         for (int i = 0; i < array.length; ++i) {
-            if ((array[i] % 2) == 0) {
+            if (array[i] > 0) {
                 result += array[i];
             }
         }
