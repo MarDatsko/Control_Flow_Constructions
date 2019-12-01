@@ -1,23 +1,22 @@
 package com.homework_2;
 
 public class OrdinaryArray {
-
     public static void main(String[] args) {
         Integer[] simpleArray = {3, 4, 1, 2, 11};
         Integer[] hardArray = {3, 2, 3, 1, 4, 2, 8, 3};
 
         System.out.print("Initial array : ");
         printArray(simpleArray);
-        reversSort(simpleArray);
-        sumPositiveNumbers(simpleArray);
-        averageValue(simpleArray);
+        sortingInReverseOrder(simpleArray);
+        addingPositiveNumbers(simpleArray);
+        showAverageValue(simpleArray);
 
         System.out.print("Initial array : ");
         printArray(hardArray);
         replacingDuplicateValues(hardArray);
     }
 
-    private static void reversSort(Integer[] array) {
+    private static void sortingInReverseOrder (Integer[] array) {
         for (int i = 0; i < array.length; ++i) {
             Integer max = array[i];
             for (int j = i; j < array.length; ++j) {
@@ -32,17 +31,17 @@ public class OrdinaryArray {
         printArray(array);
     }
 
-    private static void sumPositiveNumbers(Integer[] array) {
+    private static void addingPositiveNumbers(Integer[] array) {
         int result = 0;
         for (int i = 0; i < array.length; ++i) {
-            if (array[i] > 0) {
+            if ((array[i] % 2) == 0) {
                 result += array[i];
             }
         }
         System.out.println("\n" + "Result of the sum all positive numbers : " + result);
     }
 
-    private static void averageValue(Integer[] array) {
+    private static void showAverageValue(Integer[] array) {
         double result = 0.0d;
         for (int i = 0; i < array.length; ++i) {
             result += array[i];
@@ -64,8 +63,8 @@ public class OrdinaryArray {
     }
 
     private static void printArray(Integer[] array) {
-        for (Integer x : array) {
-            System.out.print(x + " ");
+        for (Integer item : array) {
+            System.out.print(item + " ");
         }
     }
 }
