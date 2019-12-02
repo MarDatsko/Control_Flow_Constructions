@@ -7,16 +7,16 @@ public class OrdinaryArray {
 
         System.out.print("Initial array : ");
         printArray(simpleArray);
-        sortingInReverseOrder(simpleArray);
-        addingPositiveNumbers(simpleArray);
+        sortsInReverseOrder(simpleArray);
+        addsPositiveNumbers(simpleArray);
         showAverageValue(simpleArray);
 
         System.out.print("Initial array : ");
         printArray(hardArray);
-        replacingDuplicateValues(hardArray);
+        replaceDuplicateValues(hardArray);
     }
 
-    private static void sortingInReverseOrder (Integer[] array) {
+    private static void sortsInReverseOrder (Integer[] array) {
         for (int i = 0; i < array.length; ++i) {
             Integer max = array[i];
             for (int j = i; j < array.length; ++j) {
@@ -31,7 +31,7 @@ public class OrdinaryArray {
         printArray(array);
     }
 
-    private static void addingPositiveNumbers(Integer[] array) {
+    private static void addsPositiveNumbers(Integer[] array) {
         int result = 0;
         for (int i = 0; i < array.length; ++i) {
             if ((array[i] % 2) == 0) {
@@ -50,7 +50,7 @@ public class OrdinaryArray {
         System.out.println("Average value of the array : " + result);
     }
 
-    private static void replacingDuplicateValues(Integer[] array) {
+    private static void replaceDuplicateValues(Integer[] array) {
         for (int i = 0; i < array.length; ++i) {
             for (int j = i + 1; j < array.length; ++j) {
                 if (array[i].equals(array[j])) {
